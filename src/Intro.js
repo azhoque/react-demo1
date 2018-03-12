@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 
 class Intro extends Component {
-    render() {
-      return (
-        <div>
-          <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
-      )
-    }
+  constructor(props) {
+    super(props)
+
+    this.changeTitleHandler = this.changeTitleHandler.bind(this)
   }
 
-  export default Intro;
+
+  changeTitleHandler() {
+    const inputEl = document.querySelector(".changeTitleText")
+    const newTitle = inputEl.value
+    this.props.titleChange(newTitle)
+  }
+
+  render() {
+    return (
+      <div>
+        <p className="App-intro">
+            <input className="changeTitleText" type="text" />
+            <button onClick={this.changeTitleHandler}>Change Title</button>
+        </p>
+      </div>
+    )
+  }
+}
+
+export default Intro;
