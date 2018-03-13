@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header words={this.state.title}/>
-        <Intro titleChange={this.setTitle} />
+        <Intro inputText={this.state.title} titleChange={this.setTitle} />
       </div>
     );
   }
