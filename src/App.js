@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
 import Intro from './Intro';
+import Listicle from './Listicle';
 
 class App extends Component {
   constructor (props) {
@@ -24,6 +25,7 @@ class App extends Component {
       <div className="App">
         <Header words={this.state.title}/>
         <Intro inputText={this.state.title} titleChange={this.setTitle} />
+        <Listicle />
       </div>
     );
   }
