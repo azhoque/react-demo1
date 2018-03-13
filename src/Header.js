@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
 import logo from './logo.svg';
 
-class Header extends Component {
-    render() {
-      return (
-        <div>
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">{this.props.words}</h1>
-          </header>
-        </div>
-      )
-    }
-  }
+const Header = (props) => {
+  return (
+    <div>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="App-title">{props.words}</h1>
+      </header>
+    </div>
+  )
+}
 
-  export default Header; //its telling any file that is importing JS file that is defaulting to this file
+export default Header;
