@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Header';
-import Intro from './Intro';
-import Listicle from './Listicle';
+import '../styles/App.css';
+import Header from '../components/Header';
+import Intro from '../components/Intro';
+import Listicle from '../components/Listicle';
 
 class App extends Component {
   constructor (props) {
